@@ -1,7 +1,9 @@
 package com.example.service;
 
+import com.example.common.vo.GoodsVo;
 import com.example.pojo.Order;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.example.pojo.User;
 
 /**
  * <p>
@@ -13,4 +15,11 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IOrderService extends IService<Order> {
 
+    /**
+     * 秒杀
+     * @param user
+     * @param goods
+     * @return
+     */
+    Order secKill(User user, GoodsVo goods);
 }
